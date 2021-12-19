@@ -3,6 +3,7 @@ package com.example.tiptime
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.tiptime.databinding.ActivityMainBinding
+import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -25,6 +26,17 @@ class MainActivity : AppCompatActivity() {
             R.id.option_eighteen_percent -> 0.18
             else -> 0.15
         }
+
+        var tip = tipPercentage * cost
+        //Check if switch is on
+        val roundUp = binding.roundUpSwitch.isChecked
+        if (roundUp) {
+            tip = kotlin.math.ceil(tip)
+        }
+        //Format the tip
+        val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
+        //Display the tip
+        binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
 
 
     }
