@@ -4,6 +4,8 @@ This is a tip calculator app that takes user's cost of service and calculates th
     </p>
 <hr>
 <h3>Video Walkthrough</h3>
+![](tipcalculator.gif)
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 
 ### TECHNICAL
