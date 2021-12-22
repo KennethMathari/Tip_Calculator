@@ -18,7 +18,7 @@ This is a tip calculator app that takes user's cost of service and calculates th
 
          `git clone https://github.com/KennethMathari/Tip_Calculator.git`
 
-**3. open Project in Android Studio
+**3. open Project in Android Studio**
 
 **4. Build Project**
 
