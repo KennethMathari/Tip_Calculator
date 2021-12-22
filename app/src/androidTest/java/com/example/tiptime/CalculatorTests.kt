@@ -29,6 +29,9 @@ class CalculatorTests {
         //confirm if tip result matches $10
         onView(withId(R.id.tip_result))
             .check(matches(withText(containsString("10.00"))))
+        //confirm if total amount matches $60
+        onView(withId(R.id.total_amount))
+            .check(matches(withText(containsString("60.00"))))
     }
 
     @Test
@@ -44,6 +47,9 @@ class CalculatorTests {
         //confirm if tip result matches $10.13
         onView(withId(R.id.tip_result))
             .check(matches(withText(containsString("10.13"))))
+        //confirm if total amount matches $60.8
+        onView(withId(R.id.total_amount))
+            .check(matches(withText(containsString("60.8"))))
     }
 
     @Test
@@ -56,6 +62,9 @@ class CalculatorTests {
             .perform(click())
         onView(withId(R.id.tip_result))
             .check(matches(withText(containsString("$9.00"))))
+        //confirm if total amount matches $59
+        onView(withId(R.id.total_amount))
+            .check(matches(withText(containsString("59.00"))))
     }
 
     @Test
@@ -70,6 +79,8 @@ class CalculatorTests {
             .perform(click())
         onView(withId(R.id.tip_result))
             .check(matches(withText(containsString("$9.12"))))
+        onView(withId(R.id.total_amount))
+            .check(matches(withText(containsString("59.79"))))
     }
 
     @Test
@@ -82,6 +93,8 @@ class CalculatorTests {
             .perform(click())
         onView(withId(R.id.tip_result))
             .check(matches(withText(containsString("$8.00"))))
+        onView(withId(R.id.total_amount))
+            .check(matches(withText(containsString("58.00"))))
     }
 
     @Test
@@ -96,6 +109,8 @@ class CalculatorTests {
             .perform(click())
         onView(withId(R.id.tip_result))
             .check(matches(withText(containsString("$7.60"))))
+        onView(withId(R.id.total_amount))
+            .check(matches(withText(containsString("58.27"))))
     }
 
 }
