@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         val cost = stringInTextField.toDoubleOrNull()
         if (cost == null) {
             binding.tipResult.text = "null"
+            binding.totalAmount.text=""
             return
         }
         //Get the tip percentage
@@ -36,14 +37,23 @@ class MainActivity : AppCompatActivity() {
         }
 
         var tip = tipPercentage * cost
+
         //Check if switch is on
         if (binding.roundUpSwitch.isChecked) {
             tip = kotlin.math.ceil(tip)
         }
         //Format the tip
         val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
+
+        //total amount
+        val totalAmount=cost+tip
+
+        //Format the total amount
+        val formattedTotalAmount= NumberFormat.getCurrencyInstance().format(totalAmount)
         //Display the tip
         binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
+        //Display Total Amount
+        binding.totalAmount.text=getString(R.string.total_amount, formattedTotalAmount)
 
     }
 
