@@ -11,14 +11,14 @@ This is a tip calculator app that takes user's cost of service and calculates th
 #### How to use
 
 **1. Required to run project:**
-` - To run this project use Android studio 4.* and later. It will be less messy.
+` - To run this project use Android studio 4.* and later.
 `
 
 **2. Clone this repository :**
 
          `git clone https://github.com/KennethMathari/Tip_Calculator.git`
 
-**3. open Project in Android Studio**
+**3. pen Project in Android Studio**
 
 **4. Build Project**
 
